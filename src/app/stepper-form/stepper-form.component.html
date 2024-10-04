@@ -1,0 +1,68 @@
+
+
+<div class="form-body">
+  <div class="row">
+    <div class="form-holder">
+      <div class="form-content">
+        <div class="form-items">
+          <h3>Register Today</h3>
+          <p>Fill in the data below.</p>
+          <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate class="requires-validation">
+            
+            <div class="col-md-12">
+              <mat-form-field appearance="fill">
+                <mat-label>Full Name</mat-label>
+                <input matInput formControlName="name" placeholder="Full Name" />
+              </mat-form-field>
+            </div>
+
+            <div class="col-md-12">
+              <mat-form-field appearance="fill">
+                <mat-label>E-mail Address</mat-label>
+                <input matInput formControlName="email" type="email" placeholder="E-mail Address" />
+              </mat-form-field>
+            </div>
+
+            <div class="col-md-12">
+              <mat-form-field appearance="fill">
+                <mat-label>Position</mat-label>
+                <mat-select formControlName="position">
+                  <mat-option value="" disabled>Select a Position</mat-option>
+                  <mat-option value="jweb">Junior Web Developer</mat-option>
+                  <mat-option value="sweb">Senior Web Developer</mat-option>
+                  <mat-option value="pmanager">Project Manager</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div class="col-md-12">
+              <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" type="password" placeholder="Password" />
+              </mat-form-field>
+            </div>
+
+            <div class="col-md-12 mt-3">
+              <div>
+                <label class="mb-3 mr-1">Gender: </label>
+                <mat-radio-group formControlName="gender">
+                  <mat-radio-button value="male">Male</mat-radio-button>
+                  <mat-radio-button value="female">Female</mat-radio-button>
+                  <mat-radio-button value="secret">Secret</mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </div>
+
+            <div class="form-check">
+              <mat-checkbox formControlName="confirm">I confirm that all data are correct</mat-checkbox>
+            </div>
+
+            <div class="form-button mt-3">
+              <button mat-raised-button type="submit" color="primary">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
